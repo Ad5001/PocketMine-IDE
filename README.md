@@ -21,6 +21,12 @@ This will include and parse the new library
 None so far
 
 ## Release Notes
+
+## 0.0.2
+
+Fixing compatibility bug with original extension.
+
+
 ## 0.0.1
 
 Initial release.

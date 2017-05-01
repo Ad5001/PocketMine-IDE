@@ -2,7 +2,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require('vscode');
-const phpMode_1 = require('./phpMode');
 const phpFunctionSuggestions_1 = require('./phpFunctionSuggestions');
 exports.phpFileFunctions = {};
 exports.phpFileStaticFunctions = {};
@@ -19,7 +18,7 @@ function activate(context) {
         indexPhpFiles();
     });
     // Setup our class as a compvarion item provider for function autocompvare
-    context.subscriptions.push(vscode.languages.registerCompletionItemProvider(phpMode_1.PHP_MODE, {
+    context.subscriptions.push(vscode.languages.registerCompletionItemProvider(exports.PHP_MODE, {
         provideCompletionItems(document, position, token) {
             var filename = document.fileName;
             var lineText = document.lineAt(position.line).text;
@@ -131,7 +130,7 @@ function activate(context) {
         }
     }));
     // Setup our plugin to help with function signatures
-    context.subscriptions.push(vscode.languages.registerSignatureHelpProvider(phpMode_1.PHP_MODE, new phpFunctionSuggestions_1.PhpSignatureHelpProvider(vscode.workspace.getConfiguration('php')['docsTool']), '(', ','));
+    context.subscriptions.push(vscode.languages.registerSignatureHelpProvider(exports.PHP_MODE, new phpFunctionSuggestions_1.PhpSignatureHelpProvider(vscode.workspace.getConfiguration('php')['docsTool']), '(', ','));
     // The command has been defined in the package.json file
     // Now provide the implementation of the command with  registerCommand
     // The commandId parameter must match the command field in package.json
