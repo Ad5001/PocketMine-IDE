@@ -6,6 +6,7 @@ Add all pocketmine functions & classes from a src.
 
 1. Allows an automatic class completion.
 2. Allows an automatic accessible function completion.
+3. Allows an automatic properties and Constant completions
 
 ## Requirements
 
