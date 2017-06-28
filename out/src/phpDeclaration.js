@@ -150,4 +150,3 @@ class GoDefinitionProvider {
     }
 }
 exports.GoDefinitionProvider = GoDefinitionProvider;
-//# sourceMappingURL=phpDeclaration.js.map

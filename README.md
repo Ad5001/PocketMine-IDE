@@ -1,6 +1,6 @@
 # PocketMine-IDE
 
-Add all pocketmine functions & classes from a src. Based on [https://github.com/bschulte/PHP-Autocomplete](https://github.com/bschulte/PHP-Autocomplete)
+Add all pocketmine functions & classes from a src.
 
 ## Features
 
@@ -21,6 +21,17 @@ This will include and parse the new library
 None so far
 
 ## Release Notes
+
+## 0.0.4
+
+Rewriting original extension from (almost) stratch providing an easier reading.		
+Introducing Properties (class properties, static properties and constants).		
+Fixed anyoing method duplication.	
+
+## 0.0.3
+
+Fixed bugs on Windows
+Fixed bug with autocompleting class not carring about uses.
 
 ## 0.0.2
 
