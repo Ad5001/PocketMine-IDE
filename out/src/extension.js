@@ -19,9 +19,9 @@ exports.currentPath = "";
 function activate(context) {
     // Do the initial indexing
     Indexer.indexPhpFiles();
-    
+
     // require("fs").appendFileSync("/home/ad5001/echo.txt", JSON.stringify(Indexer.phpFileProperties))
-    vscode.workspace.onDidSaveTextDocument(function (document) {
+    vscode.workspace.onDidSaveTextDocument(function(document) {
         Indexer.indexPhpFiles();
     });
 
@@ -79,7 +79,7 @@ function activate(context) {
                     }
                 }
             };
-            Indexer.done = {};// Reseting cache
+            Indexer.done = {}; // Reseting cache
             return suggestions;
         }
     }));
@@ -91,15 +91,15 @@ function activate(context) {
     /**
      * Reindex php files command
      */
-    var indexDisposable = vscode.commands.registerCommand('pmide.indexPhpFiles', function () {
+    var indexDisposable = vscode.commands.registerCommand('pmide.indexPhpFiles', function() {
         Indexer.indexPhpFiles();
     });
     /**
      * Prints everything about PHP files.
      */
-    var printDisposable = vscode.commands.registerCommand('pmide.printPhpFiles', function () {
+    var printDisposable = vscode.commands.registerCommand('pmide.printPhpFiles', function() {
         console.log(Object.keys(Indexer.phpFileFunctions).length);
-        console.log(Indexer.phpFileUses);
+        console.log(Indexer.phpFileUses, Indexer.phpFileFunctions);
     });
     context.subscriptions.push(indexDisposable);
     context.subscriptions.push(printDisposable);
@@ -107,4 +107,4 @@ function activate(context) {
 exports.activate = activate;
 
 
-exports.deactivate = function () { };
+exports.deactivate = function() {};
