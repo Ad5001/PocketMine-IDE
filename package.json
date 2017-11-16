@@ -2,7 +2,7 @@
     "name": "pocketmine-ide",
     "displayName": "PocketMine IDE",
     "description": "Implementation of external PocketMine/PHP libs for Visual Studio Code",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "publisher": "Ad5001",
     "homepage": "https://github.com/Ad5001/PocketMine-IDE",
     "keywords": [

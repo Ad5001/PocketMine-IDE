@@ -23,6 +23,15 @@ None so far
 
 ## Release Notes
 
+## 0.0.6
+
+Fixing backslash path on Windows related bugs.
+
+
+## 0.0.5
+
+Fixing most major bugs
+
 ## 0.0.4
 
 Rewriting original extension from (almost) stratch providing an easier reading.		
