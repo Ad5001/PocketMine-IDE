@@ -51,7 +51,7 @@ function activate(context) {
 
             // Check what files the current document includes/requires
             var currentFileName = document.uri.fsPath.replace(vscode.workspace.rootPath, '').slice(1);
-            var currentPath = document.uri.fsPath.replace(vscode.workspace.rootPath, '').replace("src/", "");
+            var currentPath = document.uri.fsPath.replace(vscode.workspace.rootPath, '').replace("src", "").replace("//", "/").replace("\\\\", "\\");
 
             // Look through all included/required files for the current document
             for (var f in Indexer.phpFileFunctions) {

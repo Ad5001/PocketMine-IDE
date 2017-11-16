@@ -256,7 +256,7 @@ exports.Indexer = {
         }
         libraryResult.forEach(function(path) {
             if (fs.existsSync(path)) {
-                var fileName = path.replace(vscode.workspace.rootPath, "").replace(vscode.workspace.getConfiguration('php')['pocketMinePath'], "").replace("src", "").replace("//", "/");
+                var fileName = path.replace(vscode.workspace.rootPath, "").replace(vscode.workspace.getConfiguration('php')['pocketMinePath'], "").replace("src", "").replace("//", "/").replace("\\\\", "\\");
                 // Creating the default properties
                 var fileProperties = ["phpFileFunctions", "phpFileStaticFunctions", "phpFileUses", "phpFileProperties"];
                 fileProperties.forEach(function(func) {
