@@ -1,3 +1,4 @@
+## This repository was moved to [git.ad5001.eu](https://git.ad5001.eu/Ad5001/PocketMine-IDE)
 # PocketMine-IDE
 
 Add all pocketmine functions & classes from a src.
